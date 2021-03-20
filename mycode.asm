@@ -59,11 +59,11 @@ main proc far
    mov ah, 09h
    int 21h
    
-   mov x, 4         ; store 4 to x
+   mov x, 5         ; store 4 to x
    mov y, 4         ; store 4 to y 
    
    mov dl, x        ; copy x to dl
-   sub dl, y        ; add y to dl
+   sub dl, y        ; subtract y to dl
    add dl, 48       ; add 48 to dl
    
    mov ah, 02h      ; print dl (value)
