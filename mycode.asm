@@ -7,8 +7,8 @@
    message1 db 10, 13, 10, 13, "Sum of Two Numbers Before Increment: $"
    message2 db 10, 13, "Sum of Two Numbers After Increment: $"
    
-   message3 db 10, 13, 10, 13, "Sum of Two Numbers Before Decrement: $"
-   message4 db 10, 13, "Sum of Two Numbers After Decrement: $"
+   message3 db 10, 13, 10, 13, "Difference of Two Numbers Before Decrement: $"
+   message4 db 10, 13, "Difference of Two Numbers After Decrement: $"
    
    x db ?
    y db ?
@@ -63,7 +63,7 @@ main proc far
    mov y, 4         ; store 4 to y 
    
    mov dl, x        ; copy x to dl
-   add dl, y        ; add y to dl
+   sub dl, y        ; add y to dl
    add dl, 48       ; add 48 to dl
    
    mov ah, 02h      ; print dl (value)
@@ -86,5 +86,3 @@ main proc far
       
     
 endp    
-
-end main
